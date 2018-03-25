@@ -1,0 +1,50 @@
+---
+title: "Map"
+author: "Xu Xu"
+date: "3/24/2018"
+output:
+  pdf_document: default
+  html_document: default
+  word_document: default
+---
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ggmap)
+library(tidyverse)
+library(magick)
+```
+
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+gc <- geocode("Bude")
+map_water <- get_map(gc, source="stamen", maptype = "watercolor",zoom=14)
+map_road <- get_map(gc, source="google", maptype = "roadmap",zoom=14)
+lon <- c(-4.553962,-4.551349,-4.552814,-4.550984)
+lat <- c(50.83587,50.83054,50.83347,50.8362)
+df <- as.data.frame(cbind(lon,lat))
+```
+
+## Water Map with 4 locations
+
+```{r, echo=FALSE, warning=FALSE}
+ggmap(map_water) +
+  geom_point(
+    aes(x = df$lon, y = df$lat),
+    data = df, color = "red", size = 3
+  )
+```
+
+## Road Map with 4 locations and shortest distance 
+
+```{r, echo=FALSE, message= FALSE, warning=FALSE}
+from <- "Bude North Cornwall Cricket Club, Bude, UK"
+to <- "Crooklets Inn, Bude"
+route_df <- route(from, to, structure = "route")
+ggmap(map_road) +
+  geom_path(
+    aes(x = lon, y = lat), color = "red", size = 2,
+    data = route_df, lineend = "round")+
+  geom_point(aes(x=df$lon, y=df$lat),
+             data=df, color = "red", size=2)
+```
