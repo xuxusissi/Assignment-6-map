@@ -1,6 +1,6 @@
 library(ggmap)
 library(tidyverse)
-
+library(magick)
 
 #watercolor map for Bude
 gc <- geocode("Bude")
@@ -11,7 +11,7 @@ ggmap(map_water)
 map_road <- get_map(gc, source="google", maptype = "roadmap",zoom=14)
 ggmap(map_road)
 
-#mark points for crooklets Beach, Summerleaze Beach, cricket-Bude and THe Heron on watercolor map 
+#mark points for crooklets Beach, Summerleaze Beach, Bude North Cornwall Cricket Club and Crooklets Inn on watercolor map 
 #gc1 <- geocode("Crooklets Beach, Bude")
 #gc2 <- geocode("Summerleaze Beach, Bude, UK")
 #gc3 <- geocode("Bude North Cornwall Cricket Club, Bude, UK")
@@ -28,7 +28,7 @@ ggmap(map_water) +
     data = df, color = "red", size = 3
   )
 
-#mark points for crooklets Beach,Summerleaze Beach,cricket-Bude, crooklets Inn, and the shortest distance on roadmap
+#mark points for crooklets Beach,Summerleaze Beach,Bude North Cornwall Cricket Club, Crooklets Inn, and the shortest distance on roadmap
 
 from <- "Bude North Cornwall Cricket Club, Bude, sUK"
 to <- "Crooklets Inn, Bude"

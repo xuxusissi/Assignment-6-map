@@ -48,3 +48,37 @@ ggmap(map_road) +
   geom_point(aes(x=df$lon, y=df$lat),
              data=df, color = "red", size=2)
 ```
+
+##Crooklets Beach
+
+![](http://www.thebeachhaven.co.uk/wp-content/uploads/2014/04/7004173.jpg)
+
+Crooklets is at the north side of Bude and can be reached by a short walk over the Summerleaze Down or down the hill from the town centre. Crooklets is very popular with surfers and is home to the Bude Surf Life Saving Club.  The beach has great facilities including a large car park, level access and viewing area, a play area, skate park, beach cafe, showers, amusements and pubs close by.  
+
+
+##Summerleaze Beach
+
+![](https://www.visitcornwall.com/sites/default/files/styles/product_image_breakpoints_theme_visitcornwall2_tablet_1x/public/Summerleaze%20Beach.jpg?itok=mAcLdzYM&timestamp=1319809738)
+
+Summerleaze has a unique appeal, not least because it is less than five minutes’ walk from the centre of Bude and the large car park leads directly to the sand dunes. The river, with its bobbing fishing boats, flanks the wide, sandy beach that is sheltered by the impressive breakwater, making the beach particularly popular with families and surfers. 
+
+
+
+
+
+
+
+##Bude North Cornwall Cricket Club
+
+![](http://c7.alamy.com/comp/EWN015/action-at-bude-north-cornwall-cricket-club-beside-the-atlantic-ocean-EWN015.jpg)
+
+Bude North Cornwall Cricket Club is situated on the clifftops overlooking the Atlantic Ocean, and is quite simply one of the most stunning locations you could ever wish to visit, let alone play cricket at! Bude North Cornwall Cricket Club was founded in 1870. Over the years it has played host to Hockey matches, Tennis, Cricket and even used for Mortar practice in WW2!
+
+
+##Crooklets Inn
+
+
+Pub in Bude. People talk about wine, burger and pint and good music.
+Address: Crooklets Inn, Crooklets, Bude EX23 8NF, UK
+
+![](https://media-cdn.tripadvisor.com/media/photo-o/03/c2/0a/07/crooklets-inn.jpg)
