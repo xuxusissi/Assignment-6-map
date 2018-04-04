@@ -28,11 +28,14 @@ df <- as.data.frame(cbind(lon,lat))
 ## Water Map with 4 locations
 
 ```{r, echo=FALSE, warning=FALSE}
+gchotel1 <- geocode("Edgcumbe Hotel, Bude")
+gchotel2 <- geocode("The Falcon Hotel, Bude")
+
 ggmap(map_water) +
   geom_point(
     aes(x = df$lon, y = df$lat),
     data = df, color = "red", size = 3
-  )
+  )+geom_point(aes(x = -4.548710, y = 50.831508), data = gchotel1, color = 'blue',size = 3)+geom_point(aes(x = -4.547889, y = 50.827222), data = gchotel2, color = 'blue',size = 3)+geom_text(data = gchotel1, aes(x = -4.548710, y = 50.831508,label = 'Edgcumbe Hotel'),size = 2)+geom_text(data = gchotel1, aes(x = -4.547889, y = 50.827222,label = 'The Falcon Hotel'),size = 2)
 ```
 
 ## Road Map with 4 locations and shortest distance 
@@ -46,7 +49,7 @@ ggmap(map_road) +
     aes(x = lon, y = lat), color = "red", size = 2,
     data = route_df, lineend = "round")+
   geom_point(aes(x=df$lon, y=df$lat),
-             data=df, color = "red", size=2)
+             data=df, color = "red", size=2)+geom_point(aes(x = -4.548710, y = 50.831508), data = gchotel1, color = 'blue',size = 3)+geom_point(aes(x = -4.547889, y = 50.827222), data = gchotel2, color = 'blue',size = 3)+geom_text(data = gchotel1, aes(x = -4.548710, y = 50.831508,label = 'Edgcumbe Hotel'),size = 2)+geom_text(data = gchotel1, aes(x = -4.547889, y = 50.827222,label = 'The Falcon Hotel'),size = 2)
 ```
 
 ##Crooklets Beach
@@ -82,3 +85,8 @@ Pub in Bude. People talk about wine, burger and pint and good music.
 Address: Crooklets Inn, Crooklets, Bude EX23 8NF, UK
 
 ![](https://media-cdn.tripadvisor.com/media/photo-o/03/c2/0a/07/crooklets-inn.jpg)
+
+![](https://s-ec.bstatic.com/images/hotel/max1280x900/322/32218546.jpg)
+
+![](https://t-ec.bstatic.com/images/hotel/max1280x900/108/10804711.jpg)
+
